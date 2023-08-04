@@ -17,6 +17,7 @@ const Home = () => {
     dispatch(fetchAsyncShows(showsText));
   }, [dispatch]);
 
+  //no need to place here
   // const dispatch = useDispatch();
   // useEffect(() => {
   //   dispatch(fetchAsyncMovies());
