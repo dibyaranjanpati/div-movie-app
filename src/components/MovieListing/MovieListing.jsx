@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
+import Slider from "react-slick";
 import { getAllMovies, getAllShows } from "../../features/movies/movieSlice";
 import MovieCard from "../MovieCard/MovieCard";
 import "./MovieListing.scss";
+import { settings } from "../ResponsiveSetting";
 
 const MovieListing = () => {
   const movies = useSelector(getAllMovies);
@@ -17,7 +19,7 @@ const MovieListing = () => {
       ))
     ) : (
       <div className="movies-error">
-        <h3>{movies.Error}</h3>
+        <h3 className="err-msg">{movies.Error}</h3>
       </div>
     );
 
@@ -26,18 +28,25 @@ const MovieListing = () => {
       shows.Search.map((movie, index) => <MovieCard key={index} data={movie} />)
     ) : (
       <div className="shows-error">
-        <h3>{shows.Error}</h3>
+        {console.log(shows.Error)}
+        <h3 className="err-msg">{shows.Error}</h3>
       </div>
     );
   return (
     <div className="movie-wrapper">
       <div className="movie-list">
         <h2>Movies</h2>
-        <div className="movie-container">{renderMovies}</div>
+        <div className="movie-container">
+          {" "}
+          <Slider {...settings}>{renderMovies}</Slider>
+        </div>
       </div>
       <div className="show-list">
         <h2>Shows</h2>
-        <div className="movie-container">{renderShows}</div>
+        <div className="movie-container">
+          {" "}
+          <Slider {...settings}>{renderShows}</Slider>
+        </div>
       </div>
     </div>
   );

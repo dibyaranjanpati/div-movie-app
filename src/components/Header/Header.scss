@@ -1,7 +1,8 @@
 @import "../../comman/color.scss";
 
 .header {
-  background-color: $primary-color;
+  // background-color: $primary-color;
+  background-color: rgb(14, 120, 212);
   height: 74px;
   padding: 0px 40px;
   display: flex;
@@ -19,4 +20,49 @@
 .user-image img {
   width: 38px;
   height: 38px;
+}
+.search-bar {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  form {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    button {
+      padding: 0px 8px;
+      font-size: 20px;
+      cursor: pointer;
+      height: 38px;
+      margin-left: 5px;
+      background: rgb(137, 230, 80);
+      border-radius: 5px;
+      font-weight: bold;
+      color: rgb(1, 1, 79);
+    }
+  }
+  input {
+    font-size: 18px;
+    height: 38px;
+    padding: 5px 5px 5px 10px;
+    width: 100%;
+    outline: none;
+    color: rgb(8, 3, 100);
+    font-weight: 700;
+    border-radius: 5px;
+  }
+}
+.error-input {
+  font-size: 18px;
+  height: 38px;
+  padding: 5px 5px 5px 10px;
+  width: 100%;
+  outline: none;
+  color: rgb(223, 9, 9);
+  font-weight: 700;
+  border-radius: 5px;
+  border-color: red;
+}
+.error-input::placeholder {
+  color: red;
 }

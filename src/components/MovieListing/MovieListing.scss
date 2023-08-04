@@ -1,18 +1,24 @@
-@import '../../comman/color.scss';
-
+@import "../../comman/color.scss";
 
 .movie-list,
 .show-list {
-    margin: 20px 0px ;
-    h2{
-        color: $font-secondary;
-        margin-bottom: 10px;
-        font-weight: 400;
-    }
+  margin: 20px 0px;
+  h2 {
+    color: $font-secondary;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+}
+.err-msg {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: aliceblue;
+  font-size: large;
 }
 
-.movie-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    grid-gap: 15px;
-  }
+// .movie-container {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+//     grid-gap: 15px;
+//   }

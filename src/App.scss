@@ -1,20 +1,20 @@
-@import '../src/comman/color.scss';
+@import "../src/comman/color.scss";
 
-*{
-  margin:0 ;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "open sans",sans-serif;
+  font-family: "open sans", sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
-
 }
 
-body{
+body {
   background: $primary-color;
+  // background: white;
 }
-.container{
-  margin: 0px 40px ;
+.container {
+  margin: 0px 40px;
 }
